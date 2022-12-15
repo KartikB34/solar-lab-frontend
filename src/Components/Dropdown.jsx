@@ -95,7 +95,7 @@ const Dropdown = () => {
     }
 
   return (
-    <div className='ml-8 w-[19rem] rounded-md shadow-lg my-4 border p-3'>
+    <div className='ml-4 md:ml-8 w-[19rem] rounded-md shadow-lg my-4 border p-3'>
         <div className='flex justify-between '>
             <select
                 defaultValue="Select option"
@@ -127,6 +127,7 @@ const Dropdown = () => {
                     value={input1}
                     onChange={handleInput1}
                     disabled={disable1}
+                    name="selected"
                     className='px-6 h-[30px] ml-3 py-2 border rounded-md border-gray-400 outline-none focus:border-blue-400'
                 />
             </div>
@@ -138,6 +139,7 @@ const Dropdown = () => {
                     value={input2}
                     onChange={handleInput2}
                     disabled={disable2}
+                    name="selected"
                     className='px-6 h-[30px] ml-3 py-2 border rounded-md border-gray-400 outline-none focus:border-blue-400'
                 />
             </div>
@@ -149,6 +151,7 @@ const Dropdown = () => {
                     value={input3}
                     onChange={handleInput3}
                     disabled={disable3}
+                    name="selected"
                     className='px-6 h-[30px] ml-3 py-2 border rounded-md border-gray-400 outline-none focus:border-blue-400'
                 />
             </div>
@@ -160,6 +163,7 @@ const Dropdown = () => {
                     value={input4}
                     onChange={handleInput4}
                     disabled={disable4}
+                    name="selected"
                     className='px-6 h-[30px] ml-3 py-2 border rounded-md border-gray-400 outline-none focus:border-blue-400'
                 />
             </div>
