@@ -9,23 +9,40 @@ const Dropdown = () => {
     const [input3, setInput3] = useState(0);
     const [input4, setInput4] = useState(0);
 
+    const [disable1, setDisable1] = useState(false)
+    const [disable2, setDisable2] = useState(false)
+    const [disable3, setDisable3] = useState(false)
+    const [disable4, setDisable4] = useState(false)
+
     const [calculateNo, setCalculateNo] = useState(0)
 
     const handleInput1 = (e) => {
         setInput1(e.target.value)
         setCalculateNo(e.target.value)
+        setDisable2(true)
+        setDisable3(true)
+        setDisable4(true)
     }
     const handleInput2 = (e) => {
         setInput2(e.target.value)
         setCalculateNo(e.target.value)
+        setDisable1(true)
+        setDisable3(true)
+        setDisable4(true)
     }
     const handleInput3 = (e) => {
         setInput3(e.target.value)
         setCalculateNo(e.target.value)
+        setDisable1(true)
+        setDisable2(true)
+        setDisable4(true)
     }
     const handleInput4 = (e) => {
         setInput4(e.target.value)
         setCalculateNo(e.target.value)
+        setDisable1(true)
+        setDisable2(true)
+        setDisable3(true)
     }
 
     const handleCalculate = () => {
@@ -57,6 +74,11 @@ const Dropdown = () => {
             console.log(input4)
         }
 
+        setDisable1(false)
+        setDisable2(false)
+        setDisable3(false)
+        setDisable4(false)
+
     }
 
     const handleReset = () => {
@@ -65,6 +87,11 @@ const Dropdown = () => {
         setInput3(0)
         setInput4(0)
         setCalculateNo(0)
+
+        setDisable1(false)
+        setDisable2(false)
+        setDisable3(false)
+        setDisable4(false)
     }
 
   return (
@@ -99,7 +126,7 @@ const Dropdown = () => {
                     type="number"
                     value={input1}
                     onChange={handleInput1}
-                    disabled={calculateNo}
+                    disabled={disable1}
                     className='px-6 h-[30px] ml-3 py-2 border rounded-md border-gray-400 outline-none focus:border-blue-400'
                 />
             </div>
@@ -110,6 +137,7 @@ const Dropdown = () => {
                     type="number"
                     value={input2}
                     onChange={handleInput2}
+                    disabled={disable2}
                     className='px-6 h-[30px] ml-3 py-2 border rounded-md border-gray-400 outline-none focus:border-blue-400'
                 />
             </div>
@@ -120,6 +148,7 @@ const Dropdown = () => {
                     type="number"
                     value={input3}
                     onChange={handleInput3}
+                    disabled={disable3}
                     className='px-6 h-[30px] ml-3 py-2 border rounded-md border-gray-400 outline-none focus:border-blue-400'
                 />
             </div>
@@ -130,6 +159,7 @@ const Dropdown = () => {
                     type="number"
                     value={input4}
                     onChange={handleInput4}
+                    disabled={disable4}
                     className='px-6 h-[30px] ml-3 py-2 border rounded-md border-gray-400 outline-none focus:border-blue-400'
                 />
             </div>
