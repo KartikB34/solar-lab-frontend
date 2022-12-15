@@ -15,40 +15,50 @@ const Dropdown = () => {
     const [disable4, setDisable4] = useState(false)
 
     const [calculateNo, setCalculateNo] = useState(0)
+    const [calculated, setCalculated] = useState(false)
 
     const handleInput1 = (e) => {
         setInput1(e.target.value)
         setCalculateNo(e.target.value)
+        if(!calculated){
         setDisable2(true)
         setDisable3(true)
         setDisable4(true)
+        }
     }
     const handleInput2 = (e) => {
         setInput2(e.target.value)
         setCalculateNo(e.target.value)
+        if(!calculated){
         setDisable1(true)
         setDisable3(true)
         setDisable4(true)
+        }
     }
     const handleInput3 = (e) => {
         setInput3(e.target.value)
         setCalculateNo(e.target.value)
+        if(!calculated){
         setDisable1(true)
         setDisable2(true)
         setDisable4(true)
+        }
     }
     const handleInput4 = (e) => {
         setInput4(e.target.value)
         setCalculateNo(e.target.value)
+        if(!calculated){
         setDisable1(true)
         setDisable2(true)
         setDisable3(true)
+        }
     }
 
     const handleCalculate = () => {
 
         // var num = calculateNo -  -100
         // console.log(num)
+        setCalculated(true)
 
         function getRandomInt(min, max) {
             min = Math.ceil(min);
@@ -87,6 +97,7 @@ const Dropdown = () => {
         setInput3(0)
         setInput4(0)
         setCalculateNo(0)
+        setCalculated(false)
 
         setDisable1(false)
         setDisable2(false)
