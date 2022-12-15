@@ -55,7 +55,7 @@ const Dropdown = () => {
             max = Math.floor(max);
             return Math.floor(Math.random() * (max - min) + min)
         }
-        console.log(calculateNo)
+        // console.log(calculateNo)
 
         if(!input1){
             setInput1(getRandomInt(calculateNo-100, calculateNo- -100))
@@ -95,13 +95,13 @@ const Dropdown = () => {
     }
 
   return (
-    <div className='ml-8 w-[17rem]'>
+    <div className='ml-8 w-[19rem] rounded-md shadow-lg my-4 border p-3'>
         <div className='flex justify-between '>
             <select
                 defaultValue="Select option"
                 value={option}
                 onChange={(e)=>{setOption(e.target.value)}}
-                className="my-2"
+                className="my-2 outline-none border p-1"
             >
                 <option value="">Select option</option>
                 <option value="Jan">Jan-Apr</option>
